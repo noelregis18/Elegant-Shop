@@ -29,9 +29,9 @@ const Hero = () => {
           </div>
           <div className="hidden md:block">
             <img 
-              src="https://images.unsplash.com/photo-1583744946564-b52d01a7b321?q=80&w=1600&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1600&auto=format&fit=crop" 
               alt="Shopping experience" 
-              className="rounded-lg shadow-xl"
+              className="rounded-lg shadow-xl object-cover h-[400px] w-full"
             />
           </div>
         </div>
