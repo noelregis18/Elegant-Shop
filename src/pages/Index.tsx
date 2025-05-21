@@ -5,6 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Index = () => {
+  // Define category images with more reliable links
+  const categoryImages = {
+    'electronics': "https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=300&auto=format&fit=crop",
+    'jewelry': "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=300&auto=format&fit=crop",
+    'men\'s clothing': "https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?q=80&w=300&auto=format&fit=crop",
+    'women\'s clothing': "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=300&auto=format&fit=crop"
+  };
+
   return (
     <main>
       <Hero />
@@ -15,7 +23,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Shop by Category</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['electronics', 'jewelry', 'men\'s clothing', 'women\'s clothing'].map((category) => (
+            {Object.entries(categoryImages).map(([category, imageUrl]) => (
               <Link 
                 to={`/products?category=${category}`} 
                 key={category}
@@ -27,7 +35,7 @@ const Index = () => {
                   </h3>
                 </div>
                 <img 
-                  src={`https://source.unsplash.com/300x200?${category.replace("'", "")}`} 
+                  src={imageUrl} 
                   alt={category}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />

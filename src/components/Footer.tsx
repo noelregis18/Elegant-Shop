@@ -89,6 +89,9 @@ const Footer = () => {
               Connect on Topmate
             </a>
           </p>
+          <p className="mt-2 text-gray-600">
+            Designed and Developed by Noel Regis
+          </p>
         </div>
       </div>
     </footer>
